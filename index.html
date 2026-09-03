@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Principais Comandos do Git</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            padding: 40px;
+        }
+        
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 15px;
+        }
+        
+        .commands-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .command-card {
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            padding: 20px;
+            border-radius: 5px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .command-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .command-card h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        
+        .command-card code {
+            display: block;
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 12px;
+            border-radius: 4px;
+            margin: 10px 0;
+            font-size: 14px;
+            overflow-x: auto;
+        }
+        
+        .command-card p {
+            color: #555;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        
+        .git-icon {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔧 Principais Comandos do Git</h1>
+        
+        <div class="commands-grid">
+            <div class="command-card">
+                <h3>Configuração Inicial</h3>
+                <p>Configure seu nome e email no Git:</p>
+                <code>git config --global user.name "Seu Nome"</code>
+                <code>git config --global user.email "seu@email.com"</code>
+            </div>
+            
+            <div class="command-card">
+                <h3>Criar Repositório</h3>
+                <p>Inicia um novo repositório Git:</p>
+                <code>git init</code>
+            </div>
+            
+            <div class="command-card">
+                <h3>Clonar Repositório</h3>
+                <p>Clona um repositório remoto:</p>
+                <code>git clone &lt;url&gt;</code>
+            </div>
+            
+            <div class="command-card">
+                <h3>Adicionar Arquivos</h3>
+                <p>Adiciona arquivos para staging:</p>
+                <code>git add &lt;arquivo&gt;</code>
+                <code>git add .</code>
+            </div>
+            
+            <div class="command-card">
+                <h3>Verificar Status</h3>
+                <p>Mostra o status dos arquivos:</p>
+                <code>git status</code>
+            </div>
+            
+            <div class="command-card">
+                <h3>Fazer Commit</h3>
+                <p>Registra as alterações no repositório:</p>
+                <code>git commit -m "Mensagem do commit"</code>
+            </div>
+            
+            <div class="command-card">
+                <h3>Ver Histórico</h3>
+                <p>Exibe o histórico de commits:</p>
+                <code>git log</code>
+                <code>git log --oneline</code>
+            </div>
+            
+            <div class="command-card">
+                <h3>Criar Branch</h3>
+                <p>Cria uma nova branch:</p>
+                <code>git branch &lt;nome-branch&gt;</code>
+            </div>
+            
+            <div class="command-card">
+                <h3>Mudar de Branch</h3>
+                <p>Troca para outra branch:</p>
+                <code>git checkout &lt;nome-branch&gt;</code>
+                <code>git switch &lt;nome-branch&gt;</code>
+            </div>
+            
+            <div class="command-card">
+                <h3>Listar Branches</h3>
+                <p>Lista todas as branches:</p>
+                <code>git branch -a</code>
+            </div>
+            
+            <div class="command-card">
+                <h3>Merge de Branches</h3>
+                <p>Mescla uma branch na atual:</p>
+                <code>git merge &lt;nome-branch&gt;</code>
+            </div>
+            
+            <div class="command-card">
+                <h3>Push para Remoto</h3>
+                <p>Envia commits para repositório remoto:</p>
+                <code>git push origin &lt;branch&gt;</code>
+            </div>
+            
+            <div class="command-card">
+                <h3>Pull do Remoto</h3>
+                <p>Baixa e mescla alterações remotas:</p>
+                <code>git pull origin &lt;branch&gt;</code>
+            </div>
+            
+            <div class="command-card">
+                <h3>Fetch do Remoto</h3>
+                <p>Baixa alterações sem mesclar:</p>
+                <code>git fetch origin</code>
+            </div>
+            
+            <div class="command-card">
+                <h3>Desfazer Alterações</h3>
+                <p>Remove arquivos do staging:</p>
+                <code>git reset &lt;arquivo&gt;</code>
+                <code>git restore &lt;arquivo&gt;</code>
+            </div>
+            
+            <div class="command-card">
+                <h3>Deletar Branch</h3>
+                <p>Remove uma branch local ou remota:</p>
+                <code>git branch -d &lt;nome-branch&gt;</code>
+                <code>git push origin --delete &lt;nome-branch&gt;</code>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
