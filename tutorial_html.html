@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Página demonstrativa com as principais tags HTML">
+	<title>Principais Tags HTML</title>
+</head>
+<body>
+	<header>
+		<h1>Principais Tags HTML</h1>
+		<p>Um exemplo simples de estrutura semântica em HTML.</p>
+		<nav aria-label="Navegação principal">
+			<a href="#texto">Texto</a> |
+			<a href="#listas">Listas</a> |
+			<a href="#formulario">Formulário</a>
+		</nav>
+	</header>
+
+	<main>
+		<section id="texto">
+			<h2>Tags de texto</h2>
+			<p>Este é um <strong>texto importante</strong> com uma palavra em <em>ênfase</em>.</p>
+			<p>Também podemos usar <mark>texto destacado</mark>, <small>texto menor</small> e <br>uma quebra de linha.</p>
+			<hr>
+			<blockquote>“A simplicidade é a alma da eficiência.”</blockquote>
+			<p>Exemplo de código: <code>console.log("Olá!");</code></p>
+		</section>
+
+		<section id="listas">
+			<h2>Listas</h2>
+			<h3>Lista não ordenada</h3>
+			<ul>
+				<li>HTML</li>
+				<li>CSS</li>
+				<li>JavaScript</li>
+			</ul>
+			<h3>Lista ordenada</h3>
+			<ol>
+				<li>Planejar</li>
+				<li>Desenvolver</li>
+				<li>Testar</li>
+			</ol>
+		</section>
+
+		<section>
+			<h2>Imagem e tabela</h2>
+			<figure>
+				<img src="https://via.placeholder.com/300x150" alt="Imagem ilustrativa" width="300" height="150">
+				<figcaption>Legenda da imagem.</figcaption>
+			</figure>
+			<table border="1">
+				<caption>Exemplo de tabela</caption>
+				<thead><tr><th>Nome</th><th>Categoria</th></tr></thead>
+				<tbody><tr><td>HTML</td><td>Marcação</td></tr><tr><td>CSS</td><td>Estilo</td></tr></tbody>
+			</table>
+		</section>
+
+		<section id="formulario">
+			<h2>Formulário</h2>
+			<form action="#" method="post">
+				<label for="nome">Nome:</label>
+				<input type="text" id="nome" name="nome" required>
+				<label for="email">E-mail:</label>
+				<input type="email" id="email" name="email" required>
+				<label for="mensagem">Mensagem:</label>
+				<textarea id="mensagem" name="mensagem" rows="4"></textarea>
+				<button type="submit">Enviar</button>
+			</form>
+		</section>
+	</main>
+
+	<footer>
+		<p>&copy; 2024 Página HTML. Todos os direitos reservados.</p>
+	</footer>
+</body>
+</html>
